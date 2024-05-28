@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <a class="listtab"><i class="fa-solid fa-bars"></i></a>
+  </nav>
+  <div id="list">
+    <div class="listmain">
+      <button class="cancel">X</button>
+      <div class="list1">
+        <br>
+        Wass up!! User
+      </div>
+      <li id="list2">
+        <a href="#">Home</a>
+        <a href="#">Sign In</a>
+        <a href="#">Sign Up</a>
+        <a href="#">Contact with Us!!</a>
+        <a href="#">Others</a>
+        <a href="#">Logout</a>
+      </li>
+    </div>
+  </div>
+  <script>
+    let close = document.querySelector(".cancel");
+    let listtab = document.querySelector(".listtab");
+    let list = document.getElementById("list");
+    let listmain = document.querySelector(".listmain");
+
+    list.style.transform = "translateX(calc(-100% + 10px))";
+
+    list.addEventListener("click", e => {
+      list.style.transform = "translateX(0)";
+    });
+
+    listtab.addEventListener("click", f => {
+      list.style.transform = "translateX(0)";
+    });
+
+    close.addEventListener("click", f => {
+      list.style.transform = "translateX(calc(-100% + 10px))";
+    });
+
+    close.addEventListener("click", f => {
+      event.stopPropagation();
+    });
+
+  </script>
+</body>
+</html>
